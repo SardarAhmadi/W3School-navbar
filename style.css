@@ -1,0 +1,688 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+  font-family: "Roboto", sans-serif;
+}
+body{
+  height: 100vh;
+  width: 100vw;
+  background-color: grey;
+}
+
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 6%;
+  width: 100%;
+  /* border: 2px solid green; */
+  background-color: rgb(234, 232, 232);
+  position: sticky;
+  top: 0;
+}
+
+nav .menu-side{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* border: 2px solid white; */
+  height: 100%;
+  width: 50%;
+}
+
+nav .logo{
+  display: inline block;
+  width: 10%;
+  /* border: 2px solid red; */
+}
+
+nav .logo img{
+  height: 6rem;
+  margin: 0 0.5rem;
+  /* border: 2px solid red; */
+} 
+
+nav .menu-side .menu-list{
+  /* padding: 1rem; */
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+  /* border: 2px solid black; */
+}
+
+nav .menu-side .menu-list ul{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style-type: none;
+  /* border: 2px solid magenta; */
+}
+
+nav .menu-side .menu-list ul .menus{
+  display: none;
+}
+
+nav .menu-side .menu-list ul .menu{
+  height: 100%;
+  font-size: 1.5rem;
+  margin: 0 0.3rem;
+  display: flex;
+  align-items: center;
+  /* align-self: flex-start; */
+  cursor: pointer;
+  padding: 0 1rem;
+}
+
+nav .menu-side .menu-list ul .menu:hover{
+  background-color: rgb(3, 152, 112);
+}
+
+nav .menu-side .search-bar{
+  height: 100%;
+  /* border: 2px solid blue; */
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .menu-side .search-bar .search-box{
+  width: 100%;
+  height: 70%;
+  border-radius: 2rem;
+  border: 0.1rem solid rgb(120, 117, 117);
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+}
+
+nav .menu-side .search-bar .search-box::placeholder{
+  font-size: 1.5rem;
+  padding-left: 1rem;
+  font-style: italic;
+}
+
+nav .menu-side .night-mode{
+  /* border: 2px solid grey; */
+  height: 10rem;
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav .menu-side .night-mode span{
+  font-size: 3rem;
+  color: rgb(41, 41, 41);
+}
+
+/* ----------------------------------------- */
+
+nav .login-side{
+  position: relative;
+  left: 3rem;
+  height: 100%;
+  width: 35%;
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav .login-side .plus{
+  /* border: 2px solid grey; */
+  height: 60%;
+  width: 15%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav .login-side .plus span{
+  font-size: 3rem;
+}
+
+nav .login-side .plus p{
+  font-size: 1.6rem;
+}
+
+nav .login-side .spaces{
+  /* border: 2px solid grey; */
+  height: 60%;
+  width: 15%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav .login-side .spaces span{
+  font-size: 3rem;
+}
+
+nav .login-side .spaces p{
+  font-size: 1.6rem;
+}
+
+nav .login-side .get-certified{
+  /* border: 2px solid grey; */
+  height: 60%;
+  width: 25%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav .login-side .get-certified span{
+  font-size: 3rem;
+}
+
+nav .login-side .get-certified p{
+  font-size: 1.6rem;
+}
+
+nav .login-side .sign-up{
+  height: 60%;
+  width: 15%;
+  color: white;
+  background-color: rgb(3, 152, 112);
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+  z-index: 11;
+}
+
+nav .login-side .log-in{
+  position: relative;
+  z-index: 1;
+  right: 5rem;
+  height: 60%;
+  width: 20%;
+  color: black;
+  background-color: rgba(6, 215, 159, 0.484);
+  font-size: 1.5rem;
+  padding-right: 3rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 2rem;
+}
+
+/* ------------------------------------------------ */
+
+.course-list-bar{
+  height: 4%;
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* border: 2px solid white; */
+  background-color: black;
+  color: white;
+  position: sticky;
+  top: 6%;
+}
+
+.left-arrow{
+  /* width: 5%; */
+  position: absolute;
+  left: 0.2rem;
+  background-color: black;
+  padding: 1rem;
+  z-index: 11;
+  /* border: 2px solid green; */
+  display: none;
+  cursor: pointer;
+
+}
+
+.right-arrow{
+  /* width: 100%; */
+  position: absolute;
+  left: 97.5vw;
+  padding: 1rem;
+  /* height: 100%; */
+  background-color: black;
+  z-index: 11;
+  /* border: 2px solid red; */
+  cursor: pointer;
+}
+
+.courses{
+  width: 100%;
+  overflow: hidden;
+}
+
+.courses ul{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style-type: none;
+  padding-left: 2rem;
+  width: 100%;
+}
+
+.courses ul li{
+  padding: 0 0.7rem;
+  font-size: 1.4rem;
+}
+
+.is-toggled{
+  display: block;
+}
+
+.move-left{
+  position: relative;
+  left: -3rem;
+}
+.move-right{
+  position: relative;
+  left: 1rem;
+}
+
+
+/* ------------------------------------------------- */
+
+/*
+@media (max-width: 1620px){
+  *{
+    font-size: 9px;
+  }
+}
+
+
+@media (max-width: 1450px){
+  nav .menu-side .menu-list ul .services{
+    display: none;
+  }
+}
+
+@media (max-width: 1200px){
+  nav .login-side{
+    position: relative;
+    left: 3rem;
+    height: 100%;
+    width: 45%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+@media (max-width: 1120px){
+  nav .login-side{
+    width: 35%;
+  }
+  nav .login-side .get-certified{
+    display: none;}
+    nav .menu-side{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      width: 60%;
+    }
+}
+
+*/
+
+@media(min-width: 1440px) and (max-width: 1600px){
+  html{
+    font-size: 9px;
+  }
+  nav .menu-side{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 2px solid red; */
+    height: 100%;
+    width: 60%;
+  }
+  nav .login-side .log-in{
+    position: relative;
+    z-index: 1;
+    right: 4rem;
+    height: 60%;
+    width: 20%;
+    color: black;
+    background-color: rgba(6, 215, 159, 0.484);
+    font-size: 1.5rem;
+    padding-right: 3rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 2rem;
+  }
+}
+@media(min-width: 1200px) and (max-width: 1440px){
+  html{
+    font-size: 9px;
+  }
+  nav .menu-side{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 2px solid yellow; */
+    height: 100%;
+    width: 60%;
+  }
+  nav .login-side{
+    position: relative;
+    left: 3rem;
+    height: 100%;
+    width: 40%;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  nav .login-side .log-in{
+    position: relative;
+    z-index: 1;
+    right: 3rem;
+    height: 60%;
+    width: 20%;
+    color: black;
+    background-color: rgba(6, 215, 159, 0.484);
+    font-size: 1.5rem;
+    padding-right: 3rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 2rem;
+  }
+  nav .login-side .feature{
+    margin: 0 1rem;
+  }
+}
+
+@media(min-width: 992px) and (max-width: 1200px){
+  html{
+    font-size: 8px;
+  }
+  nav .menu-side{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 2px solid orange; */
+    height: 100%;
+    width: 50%;
+  }
+  nav .menu-side .menu-list{
+    transform: translateX(-1rem);
+    width: 70%;
+  }
+  nav .menu-side .search-bar{
+    height: 100%;
+    width: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav .login-side{
+    position: relative;
+    left: 3rem;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  nav .login-side .log-in{
+    position: relative;
+    z-index: 1;
+    right: 4rem;
+    height: 60%;
+    width: 20%;
+    color: black;
+    background-color: rgba(6, 215, 159, 0.484);
+    font-size: 1.5rem;
+    padding-right: 3rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 2rem;
+  }
+  nav .login-side .feature{
+    margin: 0 1rem;
+  }
+} 
+ @media(min-width: 768px) and (max-width: 992px){
+  html{
+    font-size: 8px;
+  }
+  nav .menu-side{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 2px solid green; */
+    height: 100%;
+    width: 50%;
+  }
+  nav .menu-side .menu-list{
+    width: 70%;
+  }
+  nav .menu-side .menu-list ul .services{
+    display: none;
+  }
+  nav .menu-side .search-bar{
+    height: 100%;
+    width: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav .login-side{
+    position: relative;
+    left: 3rem;
+    height: 100%;
+    width: 55%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  nav .login-side .log-in{
+    position: relative;
+    z-index: 1;
+    right: 3rem;
+    height: 60%;
+    width: 20%;
+    color: black;
+    background-color: rgba(6, 215, 159, 0.484);
+    font-size: 1.5rem;
+    padding-right: 3rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 2rem;
+  }
+  nav .login-side .feature{
+    margin: 0 1rem;
+  }
+  nav .login-side .sign-up{
+    height: 60%;
+    width: 15%;
+    color: white;
+    background-color: rgb(3, 152, 112);
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    z-index: 11;
+    margin-left: 1rem;
+    transform: translateX(-1rem);
+  }
+} 
+ @media(min-width: 670px) and (max-width: 768px){
+  html{
+    font-size: 8px;
+  }
+  nav .menu-side{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 2px solid grey; */
+    height: 100%;
+    width: 50%;
+  }
+  nav .menu-side .menu-list{
+    width: 50%;
+  }
+  nav .menu-side .menu-list ul .services{
+    display: none;
+  }
+  nav .menu-side .menu-list ul .certificates{
+    display: none;
+  }
+  nav .menu-side .search-bar{
+    height: 100%;
+    width: 11%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav .login-side{
+    position: relative;
+    left: 3rem;
+    height: 100%;
+    width: 55%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  nav .login-side .get-certified{
+    display: none;
+  }
+  nav .login-side .log-in{
+    position: relative;
+    z-index: 1;
+    right: 2.5rem;
+    height: 60%;
+    width: 25%;
+    color: black;
+    background-color: rgba(6, 215, 159, 0.484);
+    font-size: 1.5rem;
+    padding-right: 3rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 2rem;
+  }
+  nav .login-side .feature{
+    margin: 0 1rem;
+  }
+  nav .login-side .sign-up{
+    height: 60%;
+    width: 25%;
+    color: white;
+    background-color: rgb(3, 152, 112);
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    z-index: 11;
+    /* border: 2px solid blue; */
+  }
+} 
+ @media(min-width: 480px) and (max-width: 670px){
+  html{
+    font-size: 9px;
+  }
+  nav .menu-side{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* border: 2px solid blue; */
+    height: 100%;
+    width: 50%;
+  }
+  nav .menu-side .menu-list{
+    width: 50%;
+  }
+  nav .menu-side .menu-list ul .menu{
+    display: none;
+    height: 100%;
+    font-size: 1.5rem;
+    margin: 0 0.3rem;
+    padding: 0 1rem;
+  }
+
+  nav .menu-side .menu-list ul .menus{
+    height: 100%;
+    font-size: 1.5rem;
+    margin: 0 0.3rem;
+    display: flex;
+    align-items: center;
+    /* align-self: flex-start; */
+    cursor: pointer;
+    padding: 0 1rem;
+    position: relative;
+    left: 1rem;
+  }
+  nav .menu-side .search-bar{
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav .login-side{
+    position: relative;
+    left: 3rem;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  nav .login-side .plus{
+    display: none;
+  }
+  nav .login-side .spaces{
+    display: none;
+  }
+  nav .login-side .get-certified{
+    display: none;
+  }
+  nav .login-side .log-in{
+    position: relative;
+    z-index: 1;
+    right: 0rem;
+    height: 60%;
+    width: 40%;
+    color: black;
+    background-color: rgba(6, 215, 159, 0.484);
+    font-size: 1.5rem;
+    padding-right: 3rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 2rem;
+    transform: translateX(-1.5rem);
+  }
+  nav .login-side .feature{
+    margin: 0 1rem;
+  }
+  nav .login-side .sign-up{
+    height: 60%;
+    width: 40%;
+    color: white;
+    background-color: rgb(3, 152, 112);
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    z-index: 11;
+  }
+} 

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>W3School Nav Bar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <div class="menu-side">
+      <div class="logo">
+        <img src="images/logo.png" alt="">
+      </div>
+      <div class="menu-list">
+        <ul>
+          <li class="menu">Tutorial &#x27A7;</li>
+          <li class="menu">Exercises &#x27A7;</li>
+          <li class="menu certificates">Certificates &#x27A7;</li>
+          <li class="menu services">Services &#x27A7;</li>
+          <li class="menus">Menu &#x27A7;</li>
+        </ul>
+      </div>
+      <div class="search-bar">
+        <input type="text" name="search-box" class="search-box" placeholder="Search...">
+        <span></span>
+      </div>
+      <div class="night-mode"><span>&#x2742;</span></div>
+    </div>
+    <div class="login-side">
+      <div class="plus feature"><span>&#x2727;</span><p>Plus</p></div>
+      <div class="spaces feature"><span>&#x2727;</span><p>Spaces</p></div>
+      <div class="get-certified feature"><span>&#x2727;</span><p>Get Certified</p></div>
+      <div class="sign-up">Sign Up</div>
+      <div class="log-in">Log in</div>
+    </div>
+  </nav>
+  <div class="course-list-bar">
+    <div onclick="
+        displayMode();
+      " class="js-right-arrow right-arrow"><span>&#x27A7;</span></div>
+    <div onclick="
+      moveRight();
+    " class="js-left-arrow left-arrow"><span>&#x27A7;</span></div>
+    <div class="courses">
+      <ul class="js-course-list">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>React</li>
+        <li>AST.net</li>
+        <li>Django</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>React</li>
+        <li>AST.net</li>
+        <li>Django</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>React</li>
+        <li>AST.net</li>
+        <li>Django</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>React</li>
+        <li>AST.net</li>
+        <li>Django</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>React</li>
+        <li>AST.net</li>
+        <li>Django</li>
+        <li>Django</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>React</li>
+        <li>AST.net</li>
+        <li>Django</li>
+      </ul>
+    </div>
+  </div>
+
+
+  <script>
+    const rightArrowELement = document.querySelector('.js-right-arrow');
+    const leftArrowELement = document.querySelector('.js-left-arrow');
+    const courseListElement = document.querySelector('.js-course-list');
+    function displayMode(){
+      leftArrowELement.classList.add('is-toggled');
+      courseListElement.classList.add('move-left');
+    }
+    function moveRight(){
+      courseListElement.classList.add('move-right');
+    }
+  </script>
+</body>
+</html>
